@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      name: task1
+  template:
+    metadata:
+      labels:
+        name: task1
+      name: pod1
+    spec:
+      containers:
+        - name: mahmoud-container
+          image: mahmoudgalal2023040383
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "1"
