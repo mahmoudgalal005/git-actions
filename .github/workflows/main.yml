@@ -21,3 +21,7 @@ jobs:
         run: ls 
       - name: "login to dockerhub"
         run: docker login --username ${{secrets.DOCKERUSERNAME}}  --password ${{secrets.DOCKERTOKEN}}
+      - name: "building image " 
+        run: docker build -t ${{secrets.DOCKERUSERNAME}}/mahmoudgalal_2023040383 .
+      - name: "pushing to dockerhub " 
+        run: docker push ${{secrets.DOCKERUSERNAME}}/mahmoudgalal_2023040383
