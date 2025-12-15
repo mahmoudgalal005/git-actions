@@ -15,3 +15,7 @@ jobs:
 
       - name: testing printing
         run: echo "mahmoud"
+
+      - uses : actions/checkout@v3 
+      - name: "after"
+        run: ls 
